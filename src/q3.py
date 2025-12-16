@@ -4,7 +4,11 @@ def update_dictionary(dct, key, value):
     - Create a function that updates a dictionary (dct) with a new key-value pair.
     - If the key already exists in dct, print the original value, then update its value.
     - Return the updated dictionary.
-    """
+    if key in dct:
+        print(dct[key])
+
+    dct[key] = value
+    return dct
     return
 
 
@@ -12,3 +16,11 @@ def update_dictionary(dct, key, value):
 # Invoke the function "update_dictionary" using the following scenarios:
 # - {}, "name", "Alice"
 # - {"age": 25}, "age", 26
+
+result1 = update_dictionary({}, "name", "Alice")
+print(result1)  # Expected: {"name": "Alice"}
+
+# Scenario 2
+result2 = update_dictionary({"age": 25}, "age", 26)
+print(result2)  # Expected output printed: 25
+print(result2)  # Expected: {"age": 26}
