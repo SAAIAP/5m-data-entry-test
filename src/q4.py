@@ -4,7 +4,10 @@ def string_reverse(s):
     - Create a function that reverses a given string (s).
     - s must be a string.
     - Return the reversed string.
-    """
+    if not isinstance(s, str):
+        return -1
+
+    return s[::-1]
     return
 
 
@@ -12,3 +15,5 @@ def string_reverse(s):
 # Invoke the function "string_reverse" using the following scenarios:
 # - "Hello World"
 # - "Python"
+print(string_reverse("Hello World"))  # Expected: "dlroW olleH"
+print(string_reverse("Python"))       # Expected: "nohtyP"
